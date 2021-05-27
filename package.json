@@ -1,0 +1,17 @@
+{
+    "name": "@xiaobai-world/api",
+    "version": "0.0.6",
+    "description": "xiaobai world api",
+    "main": "index.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "xiaobai-world"
+    ],
+    "author": "xiaobai-world",
+    "license": "MIT",
+    "dependencies": {
+        "@xiaobai-world/types": "0.0.1"
+    }
+}
