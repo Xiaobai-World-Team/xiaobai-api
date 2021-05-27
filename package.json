@@ -1,6 +1,6 @@
 {
     "name": "@xiaobai-world/api",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "xiaobai world api",
     "main": "index.ts",
     "scripts": {

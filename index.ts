@@ -8,7 +8,7 @@ export type {
 /**
 * mount app to xiaobai or spa
 */
-export function mount(): Promise<string> {
+export function mount(render: (selector: string) => void): Promise<void> {
  if (!window.xiaobaiApi) {
   return Promise.reject()
  }
@@ -20,8 +20,8 @@ export function mount(): Promise<string> {
    }
    const id = `#${data.id}`
    if (document.querySelector(id)) {
-    window.removeEventListener('message', messageHandler)
-    resolve(id)
+    render(id)
+    resolve()
    }
   }
   window.addEventListener('message', messageHandler)
