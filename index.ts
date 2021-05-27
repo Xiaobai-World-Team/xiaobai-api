@@ -1,6 +1,6 @@
 import { IXiaobaiWorldMessageData, IWindow } from './types'
 
-export {
+export type {
  IXiaobaiWorldMessageData,
  IWindow
 }
