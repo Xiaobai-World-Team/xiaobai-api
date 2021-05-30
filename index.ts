@@ -125,7 +125,7 @@ export function mount(render: (selector: string) => void): Promise<void> {
    const id = `#${data.id}`
    const node = document.querySelector(id);
    const name = appPackage.name;
-   if (node && node.getAttribute('app-name') === name) {
+   if (node && node.getAttribute('name') === name) {
     render(id)
    }
   }
