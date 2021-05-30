@@ -1,6 +1,6 @@
 {
     "name": "@xiaobai-world/api",
-    "version": "0.0.12",
+    "version": "0.0.14",
     "description": "xiaobai world api",
     "main": "index.ts",
     "scripts": {
@@ -12,6 +12,7 @@
     "author": "xiaobai-world",
     "license": "MIT",
     "dependencies": {
-        "@xiaobai-world/types": "0.0.1"
+        "@xiaobai-world/types": "0.0.1",
+        "axios": "^0.21.1"
     }
 }
