@@ -28,7 +28,7 @@ export interface IWindow {
   * the name of the application mounted on the window, such as:
   * notepad, photoPreview, Calendar, allow repetition in multiple windows
   */
- appName: string;
+ name: string;
  title: string,
  x: number
  y: number

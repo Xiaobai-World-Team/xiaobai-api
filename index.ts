@@ -30,7 +30,7 @@ export function mount(render: (selector: string) => void): Promise<void> {
    }
    const id = `#${data.id}`
    const node = document.querySelector(id);
-   const appName = appPackage.appName ? appPackage.appName : appPackage.name;
+   const appName = appPackage.name;
    if (node && node.getAttribute('app-name') === appName) {
     render(id)
    }
