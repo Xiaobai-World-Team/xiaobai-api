@@ -98,6 +98,11 @@ export interface IWindow {
  css: string[]
 }
 
+export interface IXiaobaiUser {
+ avatar: string
+ email: string
+}
+
 
 /*
  * because this module inside node_modules,
