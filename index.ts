@@ -6,6 +6,8 @@ declare global {
  }
 }
 
+import { IContextMenuItem, IWindow } from './src/types'
+
 /*
  * because this module inside node_modules,
  * so used relative path can visit package.json of xiaobai-app instance,
@@ -15,7 +17,17 @@ declare global {
 // @ts-ignore: Unreachable code error
 import * as appPackage from './../../../package.json';
 import { login } from './src/login';
-import { IXiaobaiApi, IXiaobaiWorldMessageData } from './src/types';
+import { IXiaobaiWorldMessageData } from './src/types';
+
+export * from './src/types';
+
+/** Xiaobai API */
+export interface IXiaobaiApi {
+ /* Show Popup Menu */
+ TrackPopupMenu(menus: IContextMenuItem[]): void
+ FileSystem: XiaobaiFileSystem
+}
+
 
 /**
 * mount app to xiaobai or spa
@@ -71,5 +83,6 @@ export class XiaobaiFileSystem {
 }
 
 export {
- login
+ login,
 }
+

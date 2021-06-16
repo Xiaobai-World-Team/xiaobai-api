@@ -1,12 +1,4 @@
 
-/** Xiaobai API */
-export interface IXiaobaiApi {
- /* Show Popup Menu */
- TrackPopupMenu(menus: IContextMenuItem[]): void
- FileSystem: XiaobaiFileSystem
-}
-
-
 export interface IXiaobaiWorldMessageData {
  XIAOBAI_EVENT: "XIAOBAI_APP_JAVASCRIPT_ENTRY_LOADED",
  id: string,
