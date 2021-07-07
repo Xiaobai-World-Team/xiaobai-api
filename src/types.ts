@@ -1,4 +1,3 @@
-
 export interface IXiaobaiWorldMessageData {
  XIAOBAI_EVENT: "XIAOBAI_APP_JAVASCRIPT_ENTRY_LOADED",
  id: string,

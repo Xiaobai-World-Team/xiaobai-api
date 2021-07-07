@@ -18,6 +18,7 @@ import { IContextMenuItem, IWindow } from './src/types'
 import * as appPackage from './../../../package.json';
 import { login } from './src/login';
 import { IXiaobaiWorldMessageData } from './src/types';
+import { XiaobaiFileSystem } from './src/fs';
 
 export * from './src/types';
 
@@ -58,29 +59,6 @@ export function mount(render: (selector: string) => void): Promise<void> {
  })
 }
 
-
-/**
- * virtual disk api;
- * avoid some users using cloud disk,because the priceis hard to bear. so matain target is save of small size file.
- */
-
-/**
- * file system
- */
-export class XiaobaiFileSystem {
- /** read dir file list */
- async readDir(path: String) {
-  return (await axios.post('/storage/fileSystem/readDir', {
-   path
-  })).data.data
- }
- /** mkdir */
- async mkDir(path: String) {
-  return (await axios.post('/storage/fileSystem/mkdir', {
-   path
-  })).data.data
- }
-}
 
 export {
  login,
