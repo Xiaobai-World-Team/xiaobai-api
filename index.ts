@@ -1,12 +1,10 @@
-import axios from 'axios'
-
 declare global {
  interface Window {
   xiaobaiApi: IXiaobaiApi
  }
 }
 
-import { IContextMenuItem, IWindow } from './src/types'
+import { IContextMenuItem } from './src/types'
 
 /*
  * because this module inside node_modules,
