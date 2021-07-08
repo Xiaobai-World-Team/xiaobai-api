@@ -16,10 +16,11 @@ import { IContextMenuItem, IWindow } from './src/types'
 
 // @ts-ignore: Unreachable code error
 import * as appPackage from './../../../package.json';
-import { login } from './src/login';
 import { IXiaobaiWorldMessageData } from './src/types';
 import { XiaobaiFileSystem } from './src/fs';
 
+export * from './src/fs'
+export * from './src/login';
 export * from './src/types';
 
 /** Xiaobai API */
@@ -58,9 +59,3 @@ export function mount(render: (selector: string) => void): Promise<void> {
   window.addEventListener('message', messageHandler)
  })
 }
-
-
-export {
- login,
-}
-
