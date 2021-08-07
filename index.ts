@@ -57,3 +57,10 @@ export function mount(render: (selector: string) => void): Promise<void> {
   window.addEventListener('message', messageHandler)
  })
 }
+
+/**
+ * return path of the current app
+ */
+export function getAppPath() {
+
+}

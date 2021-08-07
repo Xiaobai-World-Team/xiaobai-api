@@ -79,6 +79,7 @@ export interface IWindow {
  /** auto start? */
  autoStart: boolean,
  jsEntry: string,
+ appRootPath: string,
  css: string[]
 }
 
