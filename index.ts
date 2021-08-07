@@ -32,7 +32,7 @@ export interface IXiaobaiApi {
 /**
 * mount app to xiaobai or spa
 */
-export function mount(render: (selector: string) => void): Promise<void> {
+export function mount(render: (selector: string, appInfo: IXiaobaiWorldMessageData) => void): Promise<void> {
  if (!window.xiaobaiApi) {
   return Promise.reject()
  }
@@ -43,24 +43,17 @@ export function mount(render: (selector: string) => void): Promise<void> {
    if (data.XIAOBAI_EVENT !== 'XIAOBAI_APP_JAVASCRIPT_ENTRY_LOADED') {
     return
    }
-   const id = `#${data.id}`
-   const node = document.querySelector(id);
+   const mountPointId = `#${data.mountPointId}`
+   const node = document.querySelector(mountPointId);
    // @ts-ignore: Unreachable code error
    if (!appPackage.name) {
     throw new Error('package.json must include name field')
    }
    // @ts-ignore: Unreachable code error
    if (node && node.getAttribute('name') === appPackage.name) {
-    render(id)
+    render(mountPointId, data)
    }
   }
   window.addEventListener('message', messageHandler)
  })
-}
-
-/**
- * return path of the current app
- */
-export function getAppPath() {
-
 }

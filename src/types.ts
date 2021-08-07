@@ -1,6 +1,7 @@
 export interface IXiaobaiWorldMessageData {
  XIAOBAI_EVENT: "XIAOBAI_APP_JAVASCRIPT_ENTRY_LOADED",
- id: string,
+ mountPointId: string,
+ windowId:string,
  name: string,
  title: string,
 }
