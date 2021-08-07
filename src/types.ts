@@ -4,6 +4,7 @@ export interface IXiaobaiWorldMessageData {
  windowId:string,
  name: string,
  title: string,
+ appRootPath: string
 }
 
 /**
