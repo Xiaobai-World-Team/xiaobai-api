@@ -69,6 +69,13 @@ export interface IWindow {
  visible: boolean
  icon: string
  animation: boolean
+ /** before the window is maximized,save the window size for later recovery */
+ previousWindowSize?: {
+  x: number,
+  y: number,
+  width: number,
+  height: number
+ },
  /** whether the window has been consumed */
  isUsed: boolean,
  jsEntry: string,
