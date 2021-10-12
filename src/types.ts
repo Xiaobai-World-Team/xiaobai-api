@@ -1,7 +1,7 @@
 export interface IXiaobaiWorldMessageData {
  XIAOBAI_EVENT: "XIAOBAI_APP_JAVASCRIPT_ENTRY_LOADED",
  mountPointId: string,
- windowId:string,
+ windowId: string,
  name: string,
  title: string,
  appRootPath: string
@@ -69,17 +69,8 @@ export interface IWindow {
  visible: boolean
  icon: string
  animation: boolean
- /** before the window is maximized,save the window size for later recovery */
- previousWindowSize?: {
-  x: number,
-  y: number,
-  width: number,
-  height: number
- },
  /** whether the window has been consumed */
  isUsed: boolean,
- /** auto start? */
- autoStart: boolean,
  jsEntry: string,
  appRootPath: string,
  css: string[]
