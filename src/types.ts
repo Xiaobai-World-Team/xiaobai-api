@@ -65,6 +65,8 @@ export interface IWindow {
  y: number
  width: number
  height: number
+ initialWidth: number
+ initialHeight: number
  active: boolean
  visible: boolean
  icon: string
